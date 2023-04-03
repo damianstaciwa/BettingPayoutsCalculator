@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "zbIk6nWXHY0JYgzU9+AQJexVGIFBwpZmKujYQ2ljfSiRTKLuX3jWCauwc/k2apYegXThCdibJ+VTeUnodG9wDA==",
+  "dgSpecHash": "vAPSrrjlH8qd8Wm+7vf9VoFeTqgaTCzz2hNkNnkwAP58YcH+7oYEuAQc4iUyEQgOf1eTJcATclqr4bp8yT/loQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\damia\\OneDrive\\Pulpit\\Projekty\\BettingPayoutsTests\\source\\BettingPayoutsTests\\BettingPayoutsTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\damia\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\fluentassertions\\6.10.0\\fluentassertions.6.10.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.2\\microsoft.net.test.sdk.17.3.2.nupkg.sha512",
@@ -19,6 +20,7 @@
     "C:\\Users\\damia\\.nuget\\packages\\nunit.analyzers\\3.5.0\\nunit.analyzers.3.5.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\nunit3testadapter\\4.3.0\\nunit3testadapter.4.3.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.collections\\4.0.11\\system.collections.4.0.11.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.diagnostics.debug\\4.0.11\\system.diagnostics.debug.4.0.11.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.diagnostics.tools\\4.0.1\\system.diagnostics.tools.4.0.1.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.dynamic.runtime\\4.0.11\\system.dynamic.runtime.4.0.11.nupkg.sha512",
@@ -43,6 +45,7 @@
     "C:\\Users\\damia\\.nuget\\packages\\system.runtime.handles\\4.0.1\\system.runtime.handles.4.0.1.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.runtime.interopservices\\4.1.0\\system.runtime.interopservices.4.1.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.runtime.serialization.primitives\\4.1.1\\system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
+    "C:\\Users\\damia\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.text.encoding\\4.0.11\\system.text.encoding.4.0.11.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.text.encoding.extensions\\4.0.11\\system.text.encoding.extensions.4.0.11.nupkg.sha512",
     "C:\\Users\\damia\\.nuget\\packages\\system.text.regularexpressions\\4.1.0\\system.text.regularexpressions.4.1.0.nupkg.sha512",
