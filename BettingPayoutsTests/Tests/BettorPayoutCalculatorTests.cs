@@ -1,6 +1,7 @@
 ﻿using BettingPayoutsTests.Base;
 using BettingPayoutsTests.Calculators;
 using FluentAssertions;
+using FluentAssertions.Execution;
 using NUnit.Framework;
 
 namespace BettingPayoutsTests.Tests
@@ -39,8 +40,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
@@ -70,8 +74,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
@@ -101,8 +108,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
@@ -132,8 +142,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
@@ -163,8 +176,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
@@ -194,8 +210,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
@@ -225,8 +244,11 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
-            match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
-            match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            using (new AssertionScope())
+            {
+                match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
+                match.AwayTeam.Should().BeEquivalentTo(bet.AwayTeam);
+            }
 
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
