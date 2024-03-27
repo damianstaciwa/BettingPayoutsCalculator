@@ -19,6 +19,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestCalculatePayout_HomeTeamWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -31,14 +32,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 1
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.HomeTeamOdds);
 
+            // assert
             payout.Should().Be(1.8);
         }
 
         [Test]
         public void TestCalculatePayout_AwayTeamWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 12500,
@@ -51,14 +55,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 1
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.AwayTeamOdds);
 
+            // assert
             payout.Should().Be(0.72);
         }
 
         [Test]
         public void TestCalculatePayout_Draw()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 34500,
@@ -71,14 +78,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 3
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore, match.DrawOdds);
 
+            // assert
             payout.Should().Be(4.17);
         }
 
         [Test]
         public void TestCalculatePayout_NoBets()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 0,
@@ -89,14 +99,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 4
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore);
 
+            // assert
             payout.Should().Be(0);
         }
 
         [Test]
         public void TestCalculatePayout_EqualBetsForHomeAndAwayTeam()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 35000,
@@ -107,14 +120,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 0
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore);
 
+            // assert
             payout.Should().Be(1.67);
         }
 
         [Test]
         public void TestCalculatePayout_EqualBetsForAllOutcomes()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 10000,
@@ -125,14 +141,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 3
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore);
 
+            // assert
             payout.Should().Be(1.67);
         }
 
         [Test]
         public void TestCalculatePayout_AwayTeamWins_NoBetsOnDraw()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 100000,
@@ -145,14 +164,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 3
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore);
 
+            // assert
             payout.Should().Be(3.88);
         }
 
         [Test]
         public void TestCalculatePayout_Draw_NoBetsOnAwayTeam()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 46000,
@@ -165,14 +187,17 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 0
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore);
 
+            // assert
             payout.Should().Be(2.07);
         }
 
         [Test]
         public void TestCalculatePayout_Draw_NoBetsOnHomeTeam()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 0,
@@ -185,8 +210,10 @@ namespace BettingPayoutsTests.Tests
                 AwayTeamScore = 0
             };
 
+            // act
             var payout = payoutCalculator.CalculatePayout(match, match.HomeTeamScore, match.AwayTeamScore);
 
+            // assert
             payout.Should().Be(1.46);
         }
     }

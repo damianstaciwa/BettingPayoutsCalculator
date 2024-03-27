@@ -22,6 +22,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_HomeTeamWins_BettorWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -40,6 +41,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
@@ -56,6 +58,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_HomeTeamWins_BettorLoses()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -74,6 +77,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
@@ -90,6 +94,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_HomeTeamLoses_BettorWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -108,6 +113,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
@@ -124,6 +130,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_HomeTeamLoses_BettorLoses()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -142,6 +149,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
@@ -158,6 +166,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_Draw_BettorWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -176,6 +185,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
@@ -192,6 +202,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_Draw_BettorLoses_HomeTeamWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -210,6 +221,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
@@ -226,6 +238,7 @@ namespace BettingPayoutsTests.Tests
         [Test]
         public void TestBettorCalculatePayout_Draw_BettorLoses_AwayTeamWins()
         {
+            // arrange
             var match = new Match
             {
                 HomeTeamBetsAmount = 27000,
@@ -244,6 +257,7 @@ namespace BettingPayoutsTests.Tests
                 BetAmount = 100
             };
 
+            // act & assert
             using (new AssertionScope())
             {
                 match.HomeTeam.Should().BeEquivalentTo(bet.HomeTeam);
