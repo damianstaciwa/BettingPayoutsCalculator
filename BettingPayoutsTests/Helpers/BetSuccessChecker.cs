@@ -4,7 +4,7 @@ namespace BettingPayoutsTests.Helpers
 {
     public class BetSuccessChecker
     {
-        public bool IsBetSuccessfull(Match match, Bet bet)
+        public static bool IsBetSuccessfull(Match match, Bet bet)
         {
             if (match.HomeTeamScore > match.AwayTeamScore && bet.BetType.Equals(BetType.HomeTeamWins))
                 return true;

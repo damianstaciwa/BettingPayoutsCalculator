@@ -12,13 +12,16 @@ namespace BettingPayoutsTests.Calculators
         {
             betChecker = new BetSuccessChecker();
             double bettorPayout;
-
             double totalPayout = payout * bet.BetAmount;
 
-            if (betChecker.IsBetSuccessfull(match, bet))
+            if (BetSuccessChecker.IsBetSuccessfull(match, bet))
+            {
                 bettorPayout = totalPayout - (totalPayout * CommisionRates.BASIC_COMMISSION_RATE);
+            }
             else
+            {
                 bettorPayout = 0;
+            }
 
             return Math.Round(bettorPayout, 2);
         }

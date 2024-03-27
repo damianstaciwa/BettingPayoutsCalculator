@@ -9,10 +9,13 @@ namespace BettingPayoutsTests.Calculators
             var totalBetsAmount = match.HomeTeamBetsAmount + match.HomeTeamBetsAmount + match.HomeTeamBetsAmount;
 
             if (totalBetsAmount == 0)
+            {
                 return 0;
-
+            }
             else
+            {
                 return Math.Round(match.HomeTeamBetsAmount * homeTeamOdds / totalBetsAmount, 2);
+            }
         }
 
         private static double CalculatePayoutForAwayTeamWin(Match match, double awayTeamOdds)
@@ -20,10 +23,13 @@ namespace BettingPayoutsTests.Calculators
             var totalBetsAmount = match.HomeTeamBetsAmount + match.AwayTeamBetsAmount + match.DrawBetsAmount;
 
             if (totalBetsAmount == 0)
+            {
                 return 0;
-
+            }
             else
+            {
                 return Math.Round(match.AwayTeamBetsAmount * awayTeamOdds / totalBetsAmount, 2);
+            }
         }
 
         private static double CalculatePayoutForDraw(Match match, double drawOdds)
@@ -31,10 +37,13 @@ namespace BettingPayoutsTests.Calculators
             var totalBetsAmount = match.HomeTeamBetsAmount + match.AwayTeamBetsAmount + match.DrawBetsAmount;
 
             if (totalBetsAmount == 0)
+            {
                 return 0;
-
+            }
             else
+            {
                 return Math.Round(match.DrawBetsAmount * drawOdds / totalBetsAmount, 2);
+            }
         }
 
         public double CalculatePayout(Match match, int homeTeamScore, int awayTeamScore, double optionOdds = 5.0)
